@@ -1,13 +1,19 @@
 {
   "name": "salespype-theme",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "",
-  "main": "build/index.js",
+  "main": "build/bundle.js",
   "scripts": {
     "dev": "webpack serve",
-    "build": "webpack"
+    "build": "webpack --mode production",
+    "prepare": "npm run build"
   },
-  "keywords": ["orangetoolz", "mui", "theme", "custom-theme"],
+  "keywords": [
+    "orangetoolz",
+    "mui",
+    "theme",
+    "custom-theme"
+  ],
   "author": "Muhammad Laam",
   "license": "MIT",
   "publishConfig": {
@@ -25,6 +31,8 @@
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
     "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
@@ -33,6 +41,8 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.1",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

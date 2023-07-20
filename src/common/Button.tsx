@@ -1,34 +1,31 @@
+import * as React from "react"
 import styled from "@emotion/styled"
 import { Button, alpha } from "@mui/material"
 
-const CoreButton = styled(Button)(({ theme, backgroundColor }) => ({
+export const CoreButton = styled(Button)(({ theme }) => ({
   boxShadow: "none",
   minWidth: "unset",
-  "&.MuiButton-contained:focus": {
-    backgroundColor: `${
-      backgroundColor ? backgroundColor : theme.palette.primary.main
-    } !important`,
-  },
+
   "&.MuiButton-containedSecondary:focus": {
-    backgroundColor: `${theme.palette.secondary.main} !important`,
+    backgroundColor: `#006DF5 !important`,
   },
   "&.MuiButton-containedSuccess:focus": {
-    backgroundColor: `${theme.palette.success.main} !important`,
+    backgroundColor: `#008945 !important`,
   },
   "&.MuiButton-containedError:focus": {
-    backgroundColor: `${theme.palette.error.main} !important`,
+    backgroundColor: `#ED0039 !important`,
   },
   "&.MuiButton-containedWarning:focus": {
-    backgroundColor: `${theme.palette.warning.main} !important`,
+    backgroundColor: `#F2994A !important`,
   },
 
   "&.lightErrorButton": {
     "&.MuiButton-containedError": {
-      backgroundColor: alpha(theme.palette.error.main, 0.2),
-      color: theme.palette.error.main,
+      backgroundColor: alpha("#ED0039", 0.2),
+      color: "#ED0039",
     },
     "&.MuiButton-containedError:focus": {
-      backgroundColor: `${alpha(theme.palette.error.main, 0.2)} important`,
+      backgroundColor: `${alpha("#ED0039", 0.2)} important`,
     },
   },
   "&.MuiButton-outlined:focus": {
@@ -67,5 +64,3 @@ const CoreButton = styled(Button)(({ theme, backgroundColor }) => ({
     position: "unset",
   },
 }))
-
-export default CoreButton
