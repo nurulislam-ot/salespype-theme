@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "@emotion/styled"
 import { Button, alpha } from "@mui/material"
 
-export const CoreButton = styled(Button)(({ theme }) => ({
+const CoreButton = styled(Button)(({ theme }) => ({
   boxShadow: "none",
   minWidth: "unset",
 
@@ -64,3 +64,5 @@ export const CoreButton = styled(Button)(({ theme }) => ({
     position: "unset",
   },
 }))
+
+export default Button

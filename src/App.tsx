@@ -1,5 +1,5 @@
 import * as React from "react"
-import { CoreButton } from "./common/Button"
+import { CoreButton } from "./components/Button/Button"
 
 export const App = () => {
   return (

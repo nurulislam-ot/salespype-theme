@@ -17,4 +17,4 @@ export const SalesProTheme: React.FC<Props> = ({ children, theme }) => (
   <ThemeProvider theme={theme ? theme : defaultTheme}>{children}</ThemeProvider>
 )
 
-export * from "./common/Button"
+export * from "./components/Button/Button"
