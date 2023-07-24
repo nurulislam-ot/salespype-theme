@@ -65,4 +65,4 @@ const CoreButton = styled(Button)(({ theme }) => ({
   },
 }))
 
-export default Button
+export default CoreButton

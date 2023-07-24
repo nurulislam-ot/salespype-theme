@@ -1,4 +1,4 @@
-import { PaletteOptions } from "@mui/material";
+import { PaletteOptions } from "@mui/material"
 
 export const lightModePalette: PaletteOptions = {
   mode: "light",
@@ -59,7 +59,7 @@ export const lightModePalette: PaletteOptions = {
     focusOpacity: 0.12,
     activatedOpacity: 0.12,
   },
-};
+}
 
 export const myBreakpoints = {
   values: {
@@ -70,4 +70,4 @@ export const myBreakpoints = {
     xl: 1536,
     xxl: 1780,
   },
-};
+}
