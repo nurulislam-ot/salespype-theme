@@ -1,18 +1,15 @@
-import * as React from "react";
-import { Button, ButtonProps } from "@mui/material";
+import * as React from "react"
+import { Button, ButtonProps, alpha, styled } from "@mui/material"
 
-type CustomButtonVariant = "text" | "outlined" | "contained" | "custom";
+const StyledButton = styled(Button)<ButtonProps>(
+  ({ theme, variant, color = "primary" }) => {
+    if (variant === "tonal") {
+      return {
+        background: alpha(theme.palette[color as "primary"].main, 0.05),
+        color: theme.palette[color as "primary"].main,
+      }
+    }
+  }
+)
 
-interface CustomButtonProps extends ButtonProps {
-  variant?: CustomButtonVariant;
-}
-
-const CoreButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
-  ({ children, variant = "contained", ...others }, ref) => (
-    <Button ref={ref} variant="custom" {...others}>
-      {children}
-    </Button>
-  )
-);
-
-export default CoreButton;
+export default StyledButton

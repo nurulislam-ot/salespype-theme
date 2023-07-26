@@ -1,7 +1,7 @@
 import React from "react"
 import { Theme } from "@emotion/react"
 import { ThemeProvider, createTheme } from "@mui/material/styles"
-import { components, palette, typography } from "../../theme"
+import { components, palette } from "../../theme"
 
 declare module "@mui/material/styles" {
   // interface Palette {
@@ -44,7 +44,6 @@ declare module "@mui/material/Button" {
 }
 
 const defaultTheme = createTheme({
-  typography,
   palette,
   components,
 })
