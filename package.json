@@ -1,6 +1,6 @@
 {
   "name": "salespype-theme",
-  "version": "1.1.2",
+  "version": "1.1.5",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

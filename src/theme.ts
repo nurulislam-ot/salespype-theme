@@ -1,73 +1,90 @@
-import { PaletteOptions } from "@mui/material"
+import { Components, PaletteOptions } from "@mui/material"
+import { TypographyOptions } from "@mui/material/styles/createTypography"
 
-export const lightModePalette: PaletteOptions = {
-  mode: "light",
-  common: {
-    black: "#000000",
-    white: "#FFFFFF",
+const inter = ["Inter", "sans-serif"].join(",")
+
+const baseButtonStyle = {
+  fontFamily: inter,
+  fontWeight: 580,
+  lineHeight: "24px",
+}
+
+export const typography: TypographyOptions = {
+  "button-large": {
+    ...baseButtonStyle,
+    letterSpacing: "-0.3 px",
+    fontSize: "15px",
   },
-  background: {
-    paper: "#FFFFFF",
-    default: "#F9FAFB",
+
+  "button-medium": {
+    ...baseButtonStyle,
+    letterSpacing: "-0.2 px",
+    fontSize: "14px",
   },
-  text: {
-    primary: "#1C1B1F",
-    secondary: "#546376",
-  },
-  primary: {
-    main: "#6258FF", // default
-    // light: will be calculated from palette.primary.main,
-    // dark: will be calculated from palette.primary.main and palette.action.hover,
-    contrastText: "#FFFFFF",
-  },
-  secondary: {
-    main: "#006DF5",
-    contrastText: "#FFFFFF",
-  },
-  warning: {
-    main: "#F2994A",
-    contrastText: "#FFFFFF",
-    light: "#FFDCC3",
-    dark: "#944200",
-  },
-  error: {
-    main: "#ED0039",
-    light: "#ffdad9",
-    dark: "#940015",
-    contrastText: "#FFFFFF",
-  },
-  info: {
-    main: "#A352C2",
-    contrastText: "#FFFFFF",
-  },
-  success: {
-    main: "#008945",
-    light: "#baf0cb",
-    contrastText: "#FFFFFF",
-  },
-  action: {
-    active: "#949DB2",
-    // actionHover: "rgba(98, 88, 255, 0.06)",
-    hover: "rgba(100, 56, 188, 0.04)",
-    hoverOpacity: 0.03,
-    selected: "rgba(28, 15, 19, 0.08)",
-    selectedOpacity: 0.08,
-    disabled: "rgba(3, 6, 11, 0.26)",
-    disabledBackground: "rgba(3, 6, 11, 0.12)",
-    disabledOpacity: 0.38,
-    focus: "rgba(28, 15, 19, 0.12)",
-    focusOpacity: 0.12,
-    activatedOpacity: 0.12,
+
+  "button-small": {
+    ...baseButtonStyle,
+    letterSpacing: "-0.1 px",
+    fontSize: "13px",
+    lineHeight: "20px",
   },
 }
 
-export const myBreakpoints = {
-  values: {
-    xs: 0,
-    sm: 600,
-    md: 900,
-    lg: 1200,
-    xl: 1536,
-    xxl: 1780,
+export const palette: PaletteOptions = {
+  primary: {
+    main: "#346FEF",
+  },
+  secondary: {
+    main: "#924CFF",
+  },
+  error: {
+    main: "#EC131F",
+  },
+  warning: {
+    main: "#F79009",
+    contrastText: "#fff",
+  },
+  info: {
+    main: "#00BEC5",
+  },
+  success: {
+    main: "#008951",
+  },
+}
+
+export const components: Components = {
+  MuiButton: {
+    variants: [
+      {
+        props: { variant: "tonal" },
+        style: {
+          textTransform: "capitalize",
+          color: "#004ABB",
+          backgroundColor: "#346FEF0D",
+        },
+      },
+    ],
+    defaultProps: {
+      disableElevation: true,
+    },
+    styleOverrides: {
+      root: {
+        boxShadow: "none",
+        borderRadius: "8px",
+        letterSpacing: "-0.05em",
+        fontFamily: "Inter",
+        textTransform: "capitalize",
+      },
+      sizeMedium: {
+        ...typography["button-medium"],
+      },
+      sizeLarge: {
+        ...typography["button-large"],
+      },
+      sizeSmall: {
+        borderRadius: "6px",
+        ...typography["button-large"],
+      },
+    },
   },
 }

@@ -1,19 +1,39 @@
-import { Palette } from "@mui/material"
-
 declare module "@mui/material/styles" {
-  interface Palette {
-    other: {
-      [key: string]: string
-    }
+  // interface Palette {
+  //   hello: Palette["primary"]
+  // }
+
+  // interface PaletteOptions {
+  //   hello?: PaletteOptions["primary"]
+  // }
+
+  // interface SimplePaletteColorOptions {
+  //   darker?: string
+  // }
+
+  // interface PaletteColor {
+  //   darker?: string
+  // }
+
+  // interface SimplePaletteColorOptions {
+  //   darker?: string
+  // }
+
+  interface TypographyVariants {
+    "button-small": React.CSSProperties
+    "button-medium": React.CSSProperties
+    "button-large": React.CSSProperties
   }
 
-  interface PaletteOptions {
-    other: {
-      [key: string]: string | Palette["primary"]
-    }
+  interface TypographyVariantsOptions {
+    "button-small"?: React.CSSProperties
+    "button-medium"?: React.CSSProperties
+    "button-large"?: React.CSSProperties
   }
+}
 
-  interface PaletteColorOptions {
-    [key: string]: string
+declare module "@mui/material/Button" {
+  interface ButtonPropsVariantOverrides {
+    tonal: true
   }
 }
